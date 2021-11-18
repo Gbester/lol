@@ -47,13 +47,13 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) ==0) {
     $password = md5($password_1); //encrypts
      
-    $query = "INSERT INTO customers(username,password,email)
+    $query = "INSERT INTO customers (username,password,email) 
     VALUES('$username','$password','$email')";
     mysqli_query($db,$query);
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "Account Created";
     
     //header('location: index.php');
-  }
+}
 }
     
