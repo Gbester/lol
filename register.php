@@ -28,7 +28,7 @@
       <h2>Register</h2>
     </div>
     <div class="mx-auto">
-    <form method="post" action="server.php">
+    <form method="post" action="register.php">
       <?php include('errors.php'); ?>
       <div class="input-group">
         <label>Username</label>
