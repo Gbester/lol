@@ -18,9 +18,8 @@
         <a href="#allprints">All Prints</a>
         <a href="#basket">Basket</a>
         <a href="#contactus">Contact Us</a>
-        <a href="forms.html">Add </a>
       <div class="topnav-right">
-        <a class="active" href="#login">Log In</a>
+        <a class="active" href="login.php">Log In</a>
       </div>
     </div>
   <body>

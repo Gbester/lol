@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,17 +12,31 @@
     </head>
     <!--Buttons on top navigation bar-->
     <div class="topnav">
-      <a href="index.php" class="logo">Geoff's Art Emproium</a>
-        <a class="active" href="index.php">Home</a>
+      <a href="homepage.php" class="logo">Geoff's Art Emproium</a>
+        <a class="active" href="homepage.php">Home</a>
         <a href="#allprints">All Prints</a>
         <a href="#basket">Basket</a>
         <a href="#contactus">Contact Us</a>
       <div class="topnav-right">
-        <a class="active" href="login.php">Log In</a>
-        <a class="active" href="register.php">Register</a>
+        <a class="active" href="a href="index.php?logout='1'>Log out</a>
       </div>
     </div>
+ 	<!-- notification message -->
+     <?php if (isset($_SESSION['success'])) { ?>
+      <div class="error success" >
+      	<h3>
+          <?php 
+          	echo $_SESSION['success']; 
+          	unset($_SESSION['success']);
+          ?>
+      	</h3>
+      </div>
+  	<?php } ?>
 
+    <!-- logged in user information -->
+    <?php  if (isset($_SESSION['username'])) { ?>
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    <?php } ?>
     <div class="container">
         <h2>Featured Prints</h2>  
         <div id="Featuredslides" class="carousel slide" data-ride="carousel">
@@ -31,6 +46,7 @@
             <li data-target="#Featuredslides" data-slide-to="1"></li>
             <li data-target="#Featuredslides" data-slide-to="2"></li>
           </ol>
+
       
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
@@ -61,6 +77,4 @@
           </a>
         </div>
       </div>
-    
-
 </html>
