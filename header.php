@@ -35,6 +35,9 @@ if (isset($_GET['logout'])) {
         <div class="topnav-right">
         <a class="active" href="index.php?logout='1'">Log out</a>
     </div>
+    <div class="topnav">
+        <a href="artist.php">Add Artists</a>
+      </div>
         <?php }?>
     </div>
    
