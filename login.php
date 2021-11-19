@@ -1,6 +1,7 @@
 <?php include('server.php');
 include 'header.php'; ?>
 <!DOCTYPE html>
+<head><link rel="stylesheet" type="text/css" href="CSS/register.css"></head>
 <html>
 <body>
   <div class="header">

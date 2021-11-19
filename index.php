@@ -1,7 +1,24 @@
-<?php include 'header.php';?>
+<?php include 'header.php';
+session_start()?>
 <!DOCTYPE html>
 <html>
+  <body>
+  	<!-- notification message -->
+    <?php if (isset($_SESSION['success'])) { ?>
+      <div class="error success" >
+      	<h3>
+          <?php 
+          	echo $_SESSION['success']; 
+          	unset($_SESSION['success']);
+          ?>
+      	</h3>
+      </div>
+  	<?php } ?>
 
+    <!-- logged in user information -->
+    <?php  if (isset($_SESSION['username'])) { ?>
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    <?php } ?>
     <div class="container">
         <h2>Featured Prints</h2>  
         <div id="Featuredslides" class="carousel slide" data-ride="carousel">
@@ -15,7 +32,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="https://static.contrado.com/DesignTemplates/products/25572_crosshatch-sky-art-prints_0.jpeg?cache=9" alt="Mountain Range" style="width:auto;height:650px;margin-left: auto;
+              <img src="https://lh3.googleusercontent.com/w48o_BDwtH3GIEOa_4FY1vcz2ULOzE27SutXucFoW-J6JKbcWmuw8r1RkI3QjdpZu6sMLW-da75_h83g_2_Jq0mk2kyK0OgtAz4xKKV8bifs7TyK91AA_STsCdi8U0jHXnvYl2Dj" alt="Mountain Range" style="width:auto;height:650px;margin-left: auto;
               margin-right: auto;">
             </div>
       
@@ -25,7 +42,7 @@
             </div>
           
             <div class="item">
-              <img src="https://fydn.imgix.net/m%2Fgen%2Fart-print-std-landscape-framed-white%2F3eadb130-ae0c-48e4-a8f0-3ef47a4a8afe.jpg?auto=format%2Ccompress&q=75" alt="Tree" style="width:auto;height:650px;margin-left: auto;
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc0oWY_wAZ-OZ0N73gkVZ7Y9xkrnEvIVobi71oIIHYpGVD6BPpmozmNRtQbgX2DyiI1pA&usqp=CAU" alt="Tree" style="width:auto;height:650px;margin-left: auto;
               margin-right: auto;">
             </div>
           </div>
@@ -41,6 +58,7 @@
           </a>
         </div>
       </div>
+    </body>
     
 
 </html>
